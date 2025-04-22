@@ -1,0 +1,126 @@
+---
+import Website from "../assets/website.svg";
+import Youtube from "../assets/youtube.svg";
+
+const { venue, location, title, date, link } = Astro.props.data;
+const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
+  year: "numeric",
+  month: "long",
+}).format(new Date(date));
+---
+
+<article>
+  <header>
+    <h1>
+      🎤 {venue}
+    </h1>
+    <span>{location}</span>
+  </header>
+  <div class="contents">
+    🗣️ {title}
+    {
+      link && (
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+          title="Visit link in new tab"
+          aria-label="Visit link in new tab"
+        >
+          <span>
+            {link.type === "website" ? (
+              <Website stroke="currentColor"/>
+            ) : (
+              <Youtube fill="currentColor" />
+            )}
+          </span>
+        </a>
+      )
+    }
+  </div>
+  <footer>
+    📆 {formattedDate}
+  </footer>
+</article>
+
+<style>
+  article {
+    background-color: var(--base-color);
+    border: 1px solid var(--base-color-085);
+    padding: 0;
+    border-radius: 5px;
+    margin: 0 10px 20px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: var(--base-color);
+      border-radius: 5px 5px 0 0;
+      border-bottom: 1px solid var(--base-color-085);
+
+      span {
+        font-size: 0.75em;
+        padding: 0.5em 1em;
+        background-color: var(--base-color-095);
+        border: 1px solid var(--base-color-085);
+        border-radius: 3px;
+        margin-block-start: -45px;
+        margin-inline-end: 10px;
+        position: sticky;
+        top: 10px;
+      }
+      h1 {
+        font-size: 1.5em;
+        margin: 5px 10px 10px;
+      }
+    }
+    .contents {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        padding: 10px 10px 0;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+
+    }
+    .link {
+      text-decoration: none;
+      margin: 0.5em;
+      flex-grow: 0;
+      width: 2em;
+      svg {
+        aspect-ratio: 1/1;
+        width: 2em;
+        height: 2em;
+        &:hover {
+            stroke: var(--link-hover);
+        }
+        &:active,
+        &:focus {
+            stroke: var(--link-active);
+        }
+        &:visited {
+            stroke: var(--link-visited);
+        }
+      }
+    }
+    @media screen and (max-width: 800px) {
+      header {
+        h1 {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .contents {
+      padding: 10px;
+    }
+    footer {
+      padding: 10px;
+      font-size: 0.75em;
+    }
+  }
+</style>

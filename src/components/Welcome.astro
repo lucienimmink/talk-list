@@ -1,0 +1,163 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import localMugPicture from "../assets/lucien-immink.jpg";
+import Talk from "./talk.astro";
+
+const talkList = await getCollection("talks");
+const talkListSorted = talkList.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<div id="container">
+  <main>
+    <h1>{talkList.length + 1}+ Talks given by Lucien Immink</h1>
+    <p>Here are some of the talks I have given.</p>
+    <ul>
+      {
+        talkListSorted.map((talk: any) => (
+          <li>
+            <Talk data={talk.data} />
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+  <aside>
+    <div>
+      <Picture
+        src={localMugPicture}
+        formats={["avif", "webp"]}
+        alt="Lucien Immink"
+        loading="eager"
+      />
+      <h1>Bio</h1>
+      <p>
+        A former Java developer that saw the light and embraced Clippy as his
+        digital overlord.
+      </p>
+      <p>
+        Over two decades in the front-end field has taught Lucien how we often
+        reinvent the wheel to accommodate new shiny frameworks.
+      </p>
+      <p>
+        Now, as a Principal Consultant, his mission is to discover elegant
+        solutions for his clients. While we've moved beyond Flash and jQuery,
+        the web platform technologies: HTML, CSS, and JavaScript remain
+        essential. Rather than battling the platform, let’s embrace it.
+      </p>
+      <p>
+        Lucien is a rewarded Google Developer Expert for Web Technologies and
+        capabilities since 2022.
+      </p>
+      <ul>
+        <li><a href="//www.teamrockstars.nl">🏢 The place I work for</a></li>
+        <li>
+          <a href="//www.jsmusicdb.com"
+            >🎼 My spare-time music streamer project</a
+          >
+        </li>
+        <li>
+          <a href="//www.github.com/lucienimmink"
+            >🧑‍💻 Source-code for all my projects</a
+          >
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<style>
+  :root {
+    --base-color: rgb(240 240 240);
+    --base-color-085: oklch(from var(--base-color) calc(l * 0.85) c h);
+    --base-color-095: oklch(from var(--base-color) calc(l * 0.95) c h);
+    --link-color: green;
+    --link-hover: oklch(from var(--link-color) calc(l * 0.5) c h);
+    --link-active: oklch(from var(--link-color) calc(l * 1.5) c h);
+    --link-visited: oklch(from var(--link-color) l c calc(h * 1.5));
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base-color: rgb(30 30 30);
+      --base-color-085: oklch(from var(--base-color) calc(l * 1.25) c h);
+      --base-color-095: oklch(from var(--base-color) calc(l * 1.15) c h);
+      --link-color: lightgreen;
+      --link-active: oklch(from var(--link-color) calc(l * 0.75) c h);
+    }
+  }
+  #container {
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    align-items: top;
+  }
+  aside {
+    flex-grow: 0;
+    width: 20vw;
+    max-width: 25%;
+    padding: 10px;
+	  box-sizing: border-box;
+	
+    div {
+      position: sticky;
+      top: 10px;
+    }
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+      aspect-ratio: 1/1;
+      height: auto;
+    }
+    ul {
+      margin-inline-start: 10px;
+      a {
+        color: var(--link-color);
+        &:hover {
+          color: var(--link-hover);
+        }
+        &:active,
+        &:focus {
+          color: var(--link-active);
+        }
+        &:visited {
+          color: var(--link-visited);
+        }
+      }
+    }
+    border-inline-start: 1px solid var(--base-color);
+  }
+  @media screen and (max-width: 800px) {
+    #container {
+      flex-direction: column;
+      aside {
+        width: 100%;
+        max-width: 100%;
+        border-inline-start: none;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 30%;
+		  float: right;
+		  margin-block-start: 30px;
+
+        }
+      }
+    }
+  }
+  main {
+    flex-grow: 1;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0 10px;
+  }
+  p {
+    margin: 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+</style>

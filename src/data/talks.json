@@ -1,0 +1,219 @@
+[
+    {
+        "venue": "devConf 2025",
+        "location": "Heerlen, the Netherlands",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2025-03-26",
+        "link": {
+            "url": "https://devconf.nl",
+            "type": "website"
+        },
+        "id": "1"
+    },
+    {
+        "venue": "Bitbash 2025",
+        "location": "Veenendaal, the Netherlands",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2025-01-25",
+        "link": {
+            "url": "https://www.bitbash.nl/",
+            "type": "website"
+        },
+        "id": "2"
+    },
+    {
+        "venue": "Frontmania 2024",
+        "location": "Utrecht, the Netherlands",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2024-10-10",
+        "link": {
+            "url": "https://frontmania.com/",
+            "type": "website"
+        },
+        "id": "3"
+    },
+    {
+        "venue": "Rockstars Valley 2024",
+        "location": "Cuijk, the Netherlands",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2024-09-20",
+        "link": {
+            "url": "https://www.teamrockstars.nl/events/rockstars-valley-2024/",
+            "type": "website"
+        },
+        "id": "4"
+    },
+    {
+        "venue": "WeAreDevelopers Live 2024 (Season 8)",
+        "location": "Online",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2024-09-18",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=-P5RtxiV_8U&t=480s",
+            "type": "youtube"
+        },
+        "id": "5"
+    },
+    {
+        "venue": "WeAreDevelopers Live 2023 (Season 6)",
+        "location": "Online",
+        "title": "Project Fugu: Extending the web",
+        "date": "2023-11-29",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=k9y3ZSnRwzs&t=3700s",
+            "type": "youtube"
+        },
+        "id": "6"
+    },
+    {
+        "venue": "WeAreDevelopers World Congress 2023",
+        "location": "Berlin, Germany",
+        "title": "Why lit is 🔥",
+        "date": "2023-07-01",
+        "id": "7"
+    },
+    {
+        "venue": "DeveloperWeek Europe 2023",
+        "location": "Online",
+        "title": "Why lit is 🔥",
+        "date": "2023-04-01",
+        "id": "8"
+    },
+    {
+        "venue": "2022 All Day DevOps",
+        "location": "Online",
+        "title": "Cloud for Front-end",
+        "date": "2022-11-01",
+        "id": "9"
+    },
+    {
+        "venue": "WeAreDevelopers Live 2022",
+        "location": "Online",
+        "title": "One Web Component a day keeps the doctor away",
+        "date": "2022-05-18",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=jdyGVV8qwMQ&t=7278s",
+            "type": "youtube"
+        },
+        "id": "10"
+    },
+    {
+        "venue": "Devoxx Belgium 2024",
+        "location": "Antwerp, Belgium",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2024-10-01",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=R8lqWZrKS-k",
+            "type": "youtube"
+        },
+        "id": "11"
+    },
+    {
+        "venue": "iJS Munich 2023",
+        "location": "Munich, Germany",
+        "title": "Why lit is 🔥",
+        "date": "2023-10-25",
+        "id": "12"
+    },
+    {
+        "venue": "iO Guru talks",
+        "location": "Online",
+        "title": "One web component a day keeps the doctor away",
+        "date": "2021-11-03",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=KSZSd_jjTVg",
+            "type": "youtube"
+        },
+        "id": "13"
+    },
+    {
+        "venue": "CodeMotion",
+        "location": "Online",
+        "title": "The easiest way to writ a web component",
+        "date": "2021-05-20",
+        "id": "14"
+    },
+    {
+        "venue": "Techfair live!",
+        "location": "Online",
+        "title": "Standardize your automation",
+        "date": "2021-04-27",
+        "id": "14"
+    },
+    {
+        "venue": "Frontendlove virtual meetup #7",
+        "location": "Online",
+        "title": "One web component a day keeps the doctor away",
+        "date": "2020-05-07",
+        "id": "15"
+    },
+    {
+        "venue": "Frontendlove Eindhoven 2019",
+        "location": "Eindhoven, the Netherlands",
+        "title": "One web component a day keeps the doctor away",
+        "date": "2019-11-22",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=vNvuto5peM4",
+            "type": "youtube"
+        },
+        "id": "16"
+    },
+    {
+        "venue": "Hype or trend goes UK 2019",
+        "location": "Birmingham, UK",
+        "title": "Always bet on the web",
+        "date": "2019-11-12",
+        "id": "17"
+    },
+    {
+        "venue": "Eindhoven front-end meetup",
+        "location": "Eindhoven, the Netherlands",
+        "title": "Trusted Web Activity (TWA)",
+        "date": "2019-10-08",
+        "id": "18"
+    },
+    {
+        "venue": "Eindhoven front-end meetup",
+        "location": "Eindhoven, the Netherlands",
+        "title": "Technical functioning of web components, and how to offer them",
+        "date": "2018-11-20",
+        "id": "20"
+    },
+    {
+        "venue": "Tweakers developers summit 2024",
+        "location": "Utrecht, the Netherlands",
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "date": "2024-12-06",
+        "id": "21"
+    },
+    {
+        "venue": "Tweakers developers summit 2023",
+        "location": "Utrecht, the Netherlands",
+        "title": "Why lit is 🔥",
+        "date": "2023-06-01",
+        "id": "22"
+    },
+    {
+        "venue": "JSWORLD Conference 2022",
+        "location": "Online",
+        "title": "Cloud for Frontend",
+        "date": "2022-02-23",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=tagJameCCV0",
+            "type": "youtube"
+        },
+        "id": "19"
+    },
+    {
+        "venue": "Frontend Nation 2024",
+        "location": "Online",
+        "title": "Why lit is 🔥",
+        "date": "2024-06-20",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=a5tJjJQia6k",
+            "type": "youtube"
+        },
+        "id": "23"
+    }
+
+]
