@@ -214,6 +214,28 @@
             "type": "youtube"
         },
         "id": "23"
+    },
+    {
+        "venue": "techcamp Hamburg 2025",
+        "location": "Hamburg, Germany",
+        "title": "Why lit is 🔥",
+        "date": "2025-06-03",
+        "link": {
+            "url": "https://techcamp.hamburg",
+            "type": "website"
+        },
+        "id": "24"
+    },
+    {
+        "venue": "techcamp Hamburg 2025",
+        "location": "Hamburg, Germany",
+        "title": "Accessibility; beyond the tools",
+        "date": "2025-06-03",
+        "link": {
+            "url": "https://techcamp.hamburg",
+            "type": "website"
+        },
+        "id": "25"
     }
 
 ]

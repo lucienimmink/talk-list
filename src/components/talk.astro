@@ -7,6 +7,7 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
   year: "numeric",
   month: "long",
 }).format(new Date(date));
+const isDateInFuture = new Date(date) > new Date();
 ---
 
 <article>
@@ -42,6 +43,7 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
   <footer>
     📆 {formattedDate}
   </footer>
+  {isDateInFuture ? <span class="future">Upcoming</span> : ''}
 </article>
 
 <style>
@@ -51,6 +53,7 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
     padding: 0;
     border-radius: 5px;
     margin: 0 10px 20px;
+    position: relative;
 
     header {
       display: flex;
@@ -107,6 +110,19 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
             stroke: var(--link-visited);
         }
       }
+    }
+    .future {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      padding: 0.5rem;
+      width: 10rem;
+      background: var(--base-color-095);
+      border: 1px solid var(--base-color-085);
+      color: white;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
     }
     @media screen and (max-width: 800px) {
       header {
