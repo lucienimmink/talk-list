@@ -15,7 +15,7 @@ const isDateInFuture = new Date(date) > new Date();
     <h1>
       🎤 {venue}
     </h1>
-    <span>{location}</span>
+    <span>🌐 {location}</span>
   </header>
   <div class="contents">
     🗣️ {title}
@@ -45,6 +45,7 @@ const isDateInFuture = new Date(date) > new Date();
   </footer>
   {isDateInFuture ? <span class="future">Upcoming</span> : ''}
 </article>
+<br>
 
 <style>
   article {
@@ -52,7 +53,7 @@ const isDateInFuture = new Date(date) > new Date();
     border: 1px solid var(--base-color-085);
     padding: 0;
     border-radius: 5px;
-    margin: 0 10px 20px;
+    margin: 0 10px 10px;
     position: relative;
 
     header {
