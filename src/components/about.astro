@@ -1,0 +1,87 @@
+---
+import { Picture } from "astro:assets";
+import localMugPicture from "../assets/lucien-immink.jpg";
+---
+
+<div>
+  <Picture
+    src={localMugPicture}
+    formats={["avif", "webp"]}
+    alt="Lucien Immink"
+    loading="eager"
+  />
+  <h1>Bio</h1>
+  <p>
+    A former Java developer that saw the light and embraced Clippy as his
+    digital overlord.
+  </p>
+  <p>
+    Over two decades in the front-end field has taught Lucien how we often
+    reinvent the wheel to accommodate new shiny frameworks.
+  </p>
+  <p>
+    Now, as a Principal Consultant, his mission is to discover elegant solutions
+    for his clients. While we've moved beyond Flash and jQuery, the web platform
+    technologies: HTML, CSS, and JavaScript remain essential. Rather than
+    battling the platform, let’s embrace it.
+  </p>
+  <p>
+    Lucien is a rewarded Google Developer Expert for Web Technologies and
+    capabilities since 2022.
+  </p>
+  <ul>
+    <li>
+      <a href="/talk-list/index.html">🏠 talk-list</a>
+    </li>
+    <li>
+      <a href="/talk-list/sessions.html">📃 sessions</a>
+    </li>
+    <li><a href="//www.teamrockstars.nl">🏢 The place I work for</a></li>
+    <li>
+      <a href="//www.jsmusicdb.com">🎼 My spare-time music streamer project</a>
+    </li>
+    <li>
+      <a href="//www.github.com/lucienimmink"
+        >🧑‍💻 Source-code for all my projects</a
+      >
+    </li>
+  </ul>
+</div>
+
+<style>
+  div {
+    position: sticky;
+    top: 10px;
+  }
+  img {
+    border-radius: 50%;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-inline-start: 10px;
+    a {
+      color: var(--link-color);
+      &:hover {
+        color: var(--link-hover);
+      }
+      &:active,
+      &:focus {
+        color: var(--link-active);
+      }
+      &:visited {
+        color: var(--link-visited);
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    img {
+      max-width: 30%;
+      float: right;
+      margin-block-start: 30px;
+    }
+  }
+</style>

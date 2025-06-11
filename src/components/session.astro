@@ -1,0 +1,62 @@
+---
+const { title, description } = Astro.props.data;
+---
+
+<article>
+  <header>
+    <h1>
+      🎤 {title}
+    </h1>
+  </header>
+  <div class="contents">
+    <div set:html={description.replaceAll("\n", "<br>")} />
+  </div>
+</article>
+<br />
+
+<style>
+  article {
+    background-color: var(--base-color);
+    border: 1px solid var(--base-color-085);
+    padding: 0;
+    border-radius: 5px;
+    margin: 0 10px 10px;
+    position: relative;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: var(--base-color);
+      border-radius: 5px 5px 0 0;
+      border-bottom: 1px solid var(--base-color-085);
+      z-index: 1;
+
+      h1 {
+        font-size: 1.5em;
+        margin: 5px 10px 10px;
+      }
+    }
+    .contents {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+      padding: 10px 10px 0;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 800px) {
+      header {
+        h1 {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .contents {
+      padding: 10px;
+    }
+  }
+</style>

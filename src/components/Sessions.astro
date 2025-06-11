@@ -1,37 +1,21 @@
 ---
 import { getCollection } from "astro:content";
-
-import Talk from "./talk.astro";
 import About from "./about.astro";
+import Session from "./session.astro";
 
-const talkList = await getCollection("talks");
 const sessionList = await getCollection("sessions");
-const talkListSorted = talkList.sort((a, b) => {
-  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-});
-const enrichedTalkListSorted = talkListSorted.map((talk) => {
-  const session = sessionList.find(
-    (s) => s.data.sessionID === talk.data.sessionID
-  );
-  return {
-    ...talk,
-    data: {
-      ...talk.data,
-      session: session ? { id: session.id, ...session.data } : null,
-    },
-  };
-});
+
 ---
 
 <div id="container">
   <main>
-    <h1>{talkList.length + 1}+ Talks given by Lucien Immink</h1>
-    <p>Here are some of the talks I have given.</p>
+    <h1>Lucien Immink is available for {sessionList.length + 1}+ sessions</h1>
+    <p>Here are some of the current sessions I offer.</p>
     <ul>
       {
-        enrichedTalkListSorted.map((talk: any) => (
+        sessionList.map((session: any) => (
           <li>
-            <Talk data={talk.data} />
+            <Session data={session.data} />
           </li>
         ))
       }

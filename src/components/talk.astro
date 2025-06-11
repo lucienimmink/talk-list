@@ -8,7 +8,6 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
   month: "long",
 }).format(new Date(date));
 const isDateInFuture = new Date(date) > new Date();
-
 ---
 
 <article>
@@ -33,7 +32,7 @@ const isDateInFuture = new Date(date) > new Date();
         >
           <span>
             {link.type === "website" ? (
-              <Website stroke="currentColor"/>
+              <Website stroke="currentColor" />
             ) : (
               <Youtube fill="currentColor" />
             )}
@@ -46,16 +45,16 @@ const isDateInFuture = new Date(date) > new Date();
     session && (
       <details>
         <summary>Summary</summary>
-        <div set:html={session.description.replaceAll('\n', '<br>')} />
+        <div set:html={session.description.replaceAll("\n", "<br>")} />
       </details>
     )
   }
   <footer>
     📆 {formattedDate}
   </footer>
-  {isDateInFuture ? <span class="future">🔮 Upcoming</span> : ''}
+  {isDateInFuture ? <span class="future">🔮 Upcoming</span> : ""}
 </article>
-<br>
+<br />
 
 <style>
   article {
@@ -94,13 +93,12 @@ const isDateInFuture = new Date(date) > new Date();
       }
     }
     .contents {
-        display: flex;
-        justify-content: space-between;
-        align-items: top;
-        padding: 10px 10px 0;
-        font-size: 1.2em;
-        margin-bottom: 10px;
-
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+      padding: 10px 10px 0;
+      font-size: 1.2em;
+      margin-bottom: 10px;
     }
     .link {
       text-decoration: none;
@@ -112,14 +110,14 @@ const isDateInFuture = new Date(date) > new Date();
         width: 2em;
         height: 2em;
         &:hover {
-            stroke: var(--link-hover);
+          stroke: var(--link-hover);
         }
         &:active,
         &:focus {
-            stroke: var(--link-active);
+          stroke: var(--link-active);
         }
         &:visited {
-            stroke: var(--link-visited);
+          stroke: var(--link-visited);
         }
       }
     }
@@ -131,6 +129,12 @@ const isDateInFuture = new Date(date) > new Date();
       background: var(--base-color-095);
       border: 1px solid var(--base-color-085);
       text-align: center;
+    }
+    details {
+      padding: 10px;
+      summary {
+        cursor: pointer;
+      }
     }
     @media screen and (max-width: 800px) {
       header {
@@ -145,12 +149,6 @@ const isDateInFuture = new Date(date) > new Date();
     footer {
       padding: 10px;
       font-size: 0.75em;
-    }
-    details {
-      padding: 10px;
-      summary {
-        cursor: pointer;
-      }
     }
   }
 </style>
