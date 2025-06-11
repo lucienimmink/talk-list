@@ -236,6 +236,17 @@
             "type": "website"
         },
         "id": "25"
+    },
+    {
+        "venue": "iJS Munich 2025",
+        "location": "Hamburg, Germany",
+        "title": "Accessibility; beyond the tools",
+        "date": "2025-10-27",
+        "link": {
+            "url": "https://javascript-conference.com/muenchen/programm-muenchen/",
+            "type": "website"
+        },
+        "id": "26"
     }
 
 ]

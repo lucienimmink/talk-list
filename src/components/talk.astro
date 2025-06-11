@@ -43,7 +43,7 @@ const isDateInFuture = new Date(date) > new Date();
   <footer>
     📆 {formattedDate}
   </footer>
-  {isDateInFuture ? <span class="future">Upcoming</span> : ''}
+  {isDateInFuture ? <span class="future">🔮 Upcoming</span> : ''}
 </article>
 <br>
 
@@ -65,6 +65,7 @@ const isDateInFuture = new Date(date) > new Date();
       background-color: var(--base-color);
       border-radius: 5px 5px 0 0;
       border-bottom: 1px solid var(--base-color-085);
+      z-index: 1;
 
       span {
         font-size: 0.75em;
@@ -75,7 +76,7 @@ const isDateInFuture = new Date(date) > new Date();
         margin-block-start: -45px;
         margin-inline-end: 10px;
         position: sticky;
-        top: 10px;
+        top: 8px;
       }
       h1 {
         font-size: 1.5em;
@@ -116,8 +117,7 @@ const isDateInFuture = new Date(date) > new Date();
       position: absolute;
       right: 10px;
       bottom: 10px;
-      padding: 0.5rem;
-      width: 10rem;
+      padding: 0.25rem 1rem;
       background: var(--base-color-095);
       border: 1px solid var(--base-color-085);
       text-align: center;
