@@ -6,7 +6,8 @@ const talks = defineCollection({
 	schema: z.object({
 		venue: z.string(),
 		location: z.string(),
-		title: z.string(),
+		title: z.string().optional(),
+		sessionID: z.number().optional(),
 		date: z.string().date(),
 		link: z.object({
 			url: z.string().url(),
@@ -15,4 +16,13 @@ const talks = defineCollection({
 	}),
 });
 
-export const collections = { talks };
+const sessions = defineCollection({
+	loader: file("src/data/sessions.json"),
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		sessionID: z.number(),
+	}),
+});
+
+export const collections = { talks, sessions };

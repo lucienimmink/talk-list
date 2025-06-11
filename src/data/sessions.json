@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Accessibility; beyond the tools",
+        "description": "With the European Accessibility Act (EAA), it is becoming increasingly important to develop software that is accessible to everyone. While there are tools available to help improve accessibility, they often provide a skewed view of what is truly needed. It requires a fundamental shift in the organization's mindset. In this talk, Lucien will not only cover some of the available tools but also what is needed to create a culture of accessibility within your team and organization, ensuring your software is genuinely usable by everyone.\n\nDigital accessibility goes beyond implementing tools. It demands a holistic approach that encompasses all aspects of development and design. This means considering accessibility from the very beginning and integrating it into every phase of the development process. By embracing a new mindset, you can ensure your software not only meets legal requirements but is truly accessible to all users.\n\nIn this session, Lucien will discuss the key principles and strategies to enhance digital accessibility. He will discuss what you can do to create a culture of accessibility within your organization and the steps you can take to achieve this. We all benefit from more accessible websites and web applications!",
+        "sessionID": 1,
+        "id": "1"
+    },
+    {
+        "title": "Unlocking Seamless Collaboration: Design-First APIs for UI Components",
+        "description": "In the ever-evolving world of software development, teams grapple with a fundamental challenge: collaboration. Some teams have complete control over their user interfaces (UI), while others navigate the intricate dance between front-end and back-end developers. But why does collaboration remain an elusive goal? Shouldn’t it be simpler?\n\nImagine this: treating UI components as if they were APIs. Just as we meticulously design APIs before diving into implementation, let’s apply the same principle to components. Picture this: complex components—think interactive maps, ordering systems, and payment options—encased in a black-box with a well-defined API. Now take it a step further. Extend this approach to both back-end and front-end frameworks. The result? A harmonious symphony of development, where seamless collaboration becomes the norm.\n\nSo, let’s embrace the power of design-first thinking. Let’s redefine how we build, share, and collaborate. Because when components come with their APIs preordained, magic happens!",
+        "sessionID": 2,
+        "id": "2"
+    },
+    {
+        "title": "Why LIT is 🔥",
+        "description": "Every day a new JavaScript library is born, every week a new framework arrives and every month a front-end developer needs to rewrite a date picker 😢\nLIT is a modern library for creating component libraries, design systems but also sites and apps.\nLIT components are web components and as such work anywhere you use HTML.\n\nIn this talk Lucien will show what makes LIT be on fire! Web components and their interoperability combined with template literals for templating and adding just enough sauce for reactivity and other boilerplate utils to keep the overhead as low as 6KB (compressed and minified).\n\nIn short:\nWeb components\n(template) Literals\nModern tooling\nClose to the platform\nEvolves with the platform\n\nEven shorter:\n\"it's on fire!\"",
+        "sessionID": 3,
+        "id": "3"
+    },
+    {
+        "title": "Project Fugu: Extending the web",
+        "description": "Cross platform software development is hard. Not all APIs are available or compatible on all platforms and you might end up with 3 implementations for the same feature. \nWith PWA this changed and it's still changing. With Project Fugu more APIs become available to the web platform, \nAPIs that can really close the gap between web and app, that is if the platform allows it...",
+        "sessionID": 4,
+        "id": "4"
+    },
+    {
+        "title": "Cloud for Front-end",
+        "description": "What do front-end development and cloud technology have in common? YOU! Automate your build, test, deploy and run tasks in an integrated environment or just prebuilt services so you can finally go back to doing the cool things: front-end development.",
+        "sessionID": 5,
+        "id": "5"
+    },
+    {
+        "title": "One Web Component a day keeps the doctor away",
+        "description": "Ever built a UI library? Did you ever had to rewrite it so it can be used with a different library? Ever had to port that perfect date-picker just because it was written in jQuery and not React?\n\nLet's talk about web components and how they help to build scalable and maintainable applications. Do you need to replace your whole front-end stack with web components or can you replace bit by bit? Spoiler: it's the latter. \nEver wondered if they play well with Angular, React or Vue?\nWhy would you consider web components and when can you safely ignore their existence?\nJoin me and find out!",
+        "sessionID": 6,
+        "id": "6"
+    }
+]

@@ -13,6 +13,9 @@
         "title": {
           "type": "string"
         },
+        "sessionID": {
+          "type": "number"
+        },
         "date": {
           "type": "string",
           "format": "date"
@@ -45,7 +48,6 @@
       "required": [
         "venue",
         "location",
-        "title",
         "date"
       ],
       "additionalProperties": false

@@ -2,12 +2,13 @@
 import Website from "../assets/website.svg";
 import Youtube from "../assets/youtube.svg";
 
-const { venue, location, title, date, link } = Astro.props.data;
+const { venue, location, title, date, link, session } = Astro.props.data;
 const formattedDate = new Intl.DateTimeFormat(navigator.languages, {
   year: "numeric",
   month: "long",
 }).format(new Date(date));
 const isDateInFuture = new Date(date) > new Date();
+
 ---
 
 <article>
@@ -18,7 +19,8 @@ const isDateInFuture = new Date(date) > new Date();
     <span>🌐 {location}</span>
   </header>
   <div class="contents">
-    🗣️ {title}
+    🗣️ {session ? session?.title : title}
+
     {
       link && (
         <a
@@ -40,6 +42,14 @@ const isDateInFuture = new Date(date) > new Date();
       )
     }
   </div>
+  {
+    session && (
+      <details>
+        <summary>Summary</summary>
+        <div set:html={session.description.replaceAll('\n', '<br>')} />
+      </details>
+    )
+  }
   <footer>
     📆 {formattedDate}
   </footer>
@@ -135,6 +145,12 @@ const isDateInFuture = new Date(date) > new Date();
     footer {
       padding: 10px;
       font-size: 0.75em;
+    }
+    details {
+      padding: 10px;
+      summary {
+        cursor: pointer;
+      }
     }
   }
 </style>
