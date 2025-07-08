@@ -1,5 +1,7 @@
 ---
-const { title, description } = Astro.props.data;
+import Website from "../assets/website.svg";
+
+const { title, description, url } = Astro.props.data;
 ---
 
 <article>
@@ -7,6 +9,15 @@ const { title, description } = Astro.props.data;
     <h1>
       🎤 {title}
     </h1>
+    {
+      url ? (
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <span>
+            <Website stroke="currentColor" />
+          </span>
+        </a>
+      ) : null
+    }
   </header>
   <div class="contents">
     <div set:html={description.replaceAll("\n", "<br>")} />
@@ -37,6 +48,28 @@ const { title, description } = Astro.props.data;
       h1 {
         font-size: 1.5em;
         margin: 5px 10px 10px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0.5em 1em;
+      }
+      svg {
+        aspect-ratio: 1/1;
+        width: 2em;
+        height: 2em;
+        &:hover {
+          stroke: var(--link-hover);
+        }
+        &:active,
+        &:focus {
+          stroke: var(--link-active);
+        }
+        &:visited {
+          stroke: var(--link-visited);
+        }
       }
     }
     .contents {
