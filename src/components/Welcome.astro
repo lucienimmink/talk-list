@@ -4,6 +4,8 @@ import { getCollection } from "astro:content";
 import Talk from "./talk.astro";
 import About from "./about.astro";
 
+import "../styles/styles.css";
+
 const talkList = await getCollection("talks");
 const sessionList = await getCollection("sessions");
 const talkListSorted = talkList.sort((a, b) => {
@@ -24,81 +26,22 @@ const enrichedTalkListSorted = talkListSorted.map((talk) => {
 ---
 
 <div id="container">
-  <main>
-    <h1>{talkList.length + 1}+ Talks given by Lucien Immink</h1>
-    <p>Here are some of the talks I have given.</p>
-    <ul>
-      {
-        enrichedTalkListSorted.map((talk: any) => (
-          <li>
-            <Talk data={talk.data} />
-          </li>
-        ))
-      }
-    </ul>
-  </main>
-  <aside>
-    <About />
-  </aside>
+  <div class="content-wrapper">
+    <main>
+      <h1>{talkList.length + 1}+ Talks given by Lucien Immink</h1>
+      <p>Here are some of the talks I have given.</p>
+      <ul>
+        {
+          enrichedTalkListSorted.map((talk: any) => (
+            <li>
+              <Talk data={talk.data} />
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+    <aside>
+      <About />
+    </aside>
+  </div>
 </div>
-
-<style>
-  :root {
-    --base-color: rgb(240 240 240);
-    --base-color-085: oklch(from var(--base-color) calc(l * 0.85) c h);
-    --base-color-095: oklch(from var(--base-color) calc(l * 0.95) c h);
-    --link-color: green;
-    --link-hover: oklch(from var(--link-color) calc(l * 0.5) c h);
-    --link-active: oklch(from var(--link-color) calc(l * 1.5) c h);
-    --link-visited: oklch(from var(--link-color) l c calc(h * 1.5));
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --base-color: rgb(30 30 30);
-      --base-color-085: oklch(from var(--base-color) calc(l * 1.25) c h);
-      --base-color-095: oklch(from var(--base-color) calc(l * 1.15) c h);
-      --link-color: lightgreen;
-      --link-active: oklch(from var(--link-color) calc(l * 0.75) c h);
-    }
-  }
-  #container {
-    display: flex;
-    flex-direction: row;
-    font-family: sans-serif;
-    align-items: top;
-  }
-  aside {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 20vw;
-    max-width: 25%;
-    padding: 10px;
-    box-sizing: border-box;
-    border-inline-start: 1px solid var(--base-color);
-  }
-  @media screen and (max-width: 800px) {
-    #container {
-      flex-direction: column;
-      aside {
-        width: 100%;
-        max-width: 100%;
-        border-inline-start: none;
-        margin-bottom: 20px;
-      }
-    }
-  }
-  main {
-    flex-grow: 1;
-  }
-  h1 {
-    font-size: 2em;
-    margin: 0 10px;
-  }
-  p {
-    margin: 10px;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-</style>
