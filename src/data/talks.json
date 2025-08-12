@@ -258,6 +258,17 @@
             "type": "website"
         },
         "id": "27"
+    },
+    {
+        "venue": "Devoxx Belgium 2025",
+        "location": "Antwerp, Belgium",
+        "sessionID": 1,
+        "date": "2025-10-06",
+        "link": {
+            "url": "http://devoxx.be/",
+            "type": "website"
+        },
+        "id": "28"
     }
 
 ]
