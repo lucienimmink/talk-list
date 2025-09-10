@@ -239,7 +239,7 @@
     },
     {
         "venue": "iJS Munich 2025",
-        "location": "Hamburg, Germany",
+        "location": "Munich, Germany",
         "sessionID": 1,
         "date": "2025-10-27",
         "link": {
@@ -247,17 +247,6 @@
             "type": "website"
         },
         "id": "26"
-    },
-    {
-        "venue": "Rockstars Valley 2025",
-        "location": "Amsterdam, the Netherlands",
-        "sessionID": 1,
-        "date": "2025-10-07",
-        "link": {
-            "url": "https://www.teamrockstars.nl/events/rockstars-valley-en-awards-2025/",
-            "type": "website"
-        },
-        "id": "27"
     },
     {
         "venue": "Devoxx Belgium 2025",
@@ -268,7 +257,7 @@
             "url": "http://devoxx.be/",
             "type": "website"
         },
-        "id": "28"
+        "id": "27"
     }
 
 ]
