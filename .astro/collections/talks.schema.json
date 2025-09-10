@@ -4,53 +4,58 @@
     "talks": {
       "type": "object",
       "properties": {
-        "venue": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "sessionID": {
-          "type": "number"
-        },
-        "date": {
-          "type": "string",
-          "format": "date"
-        },
-        "link": {
-          "type": "object",
-          "properties": {
-            "url": {
-              "type": "string",
-              "format": "uri"
-            },
-            "type": {
-              "type": "string",
-              "enum": [
-                "website",
-                "youtube"
-              ]
-            }
-          },
-          "required": [
-            "url",
-            "type"
-          ],
-          "additionalProperties": false
-        },
         "$schema": {
           "type": "string"
         }
       },
-      "required": [
-        "venue",
-        "location",
-        "date"
-      ],
-      "additionalProperties": false
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "venue": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "sessionID": {
+            "type": "number"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "link": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "website",
+                  "youtube"
+                ]
+              }
+            },
+            "required": [
+              "url",
+              "type"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "venue",
+          "location",
+          "date"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "$schema": "http://json-schema.org/draft-07/schema#"

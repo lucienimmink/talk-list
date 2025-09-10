@@ -4,29 +4,34 @@
     "sessions": {
       "type": "object",
       "properties": {
-        "title": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "sessionID": {
-          "type": "number"
-        },
         "$schema": {
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "description",
-        "sessionID"
-      ],
-      "additionalProperties": false
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "sessionID": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "sessionID"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "$schema": "http://json-schema.org/draft-07/schema#"
