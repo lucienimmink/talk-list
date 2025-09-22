@@ -252,12 +252,23 @@
         "venue": "Devoxx Belgium 2025",
         "location": "Antwerp, Belgium",
         "sessionID": 1,
-        "date": "2025-10-06",
+        "date": "2025-10-07",
         "link": {
             "url": "http://devoxx.be/",
             "type": "website"
         },
         "id": "27"
+    },
+    {
+        "venue": "Frontmania 2025",
+        "location": "Utrecht, the Netherlands",
+        "sessionID": 7,
+        "date": "2025-10-08",
+        "link": {
+            "url": "https://frontmania.com/",
+            "type": "website"
+        },
+        "id": "28"
     }
 
 ]
