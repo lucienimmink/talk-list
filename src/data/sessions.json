@@ -44,6 +44,7 @@
         "title": "Fully server-side rendered web apps",
         "description": "Single Page Applications (SPAs) have their advantages, but they also bring complexity and performance issues. By returning to server-rendered pages and utilizing modern view transitions, you can combine the simplicity and speed of traditional web pages with the smooth experience of a web app.\n\nSPAs can lead to longer load times, SEO challenges, and increased complexity in managing the application. Server-rendered pages offer a solution by reducing initial load times and improving overall performance. With the latest techniques for view transitions, you can also create a seamless and fluid user experience reminiscent of an SPA, including video that keeps on playing even if you navigate to a new page!\n\nIn this session, Lucien will discuss the benefits of server-rendered pages and show you how to implement modern view transitions to provide a web app-like experience. He will share practical examples and best practices to help you transition from SPAs to server-rendered pages.\n\nThank you client-side state management but it's time to move on!",
         "sessionID": 7,
+        "url": "https://fully-server-side-rendered-web-apps.netlify.app/",
         "id": "7"
     }
 ]
