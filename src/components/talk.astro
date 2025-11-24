@@ -132,8 +132,12 @@ const isDateInFuture = new Date(date) > new Date();
     }
     details {
       padding: 10px;
+      user-select: none;
       summary {
         cursor: pointer;
+      }
+      > div {
+        user-select: text;
       }
     }
     @media screen and (max-width: 800px) {
