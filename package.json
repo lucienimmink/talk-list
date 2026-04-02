@@ -10,7 +10,7 @@
     "deploy": "npm run build && node ./scripts/deploy.js"
   },
   "dependencies": {
-    "astro": "^5.7.3"
+    "astro": "^6.0.0"
   },
   "volta": {
     "node": "24.14.1",
