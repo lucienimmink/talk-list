@@ -1,7 +1,33 @@
 {
-  "$ref": "#/definitions/sessions",
-  "definitions": {
-    "sessions": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "anyOf": [
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "sessionID": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "sessionID"
+        ]
+      }
+    },
+    {
       "type": "object",
       "properties": {
         "$schema": {
@@ -29,10 +55,8 @@
           "title",
           "description",
           "sessionID"
-        ],
-        "additionalProperties": false
+        ]
       }
     }
-  },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  ]
 }
