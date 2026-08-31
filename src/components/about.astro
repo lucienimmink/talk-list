@@ -6,8 +6,11 @@ import localMugPicture from "../assets/lucien-immink.jpg";
 <div>
   <Picture
     src={localMugPicture}
+    widths={[90, 40, 267, localMugPicture.width]}
+    sizes={`(max-width: 360px) 90px, (max-width: 720px) 40px, (max-width: 1600px) 267px, ${localMugPicture.width}px`}
     formats={["avif", "webp"]}
     alt="Lucien Immink"
+    decoding="async"
     loading="eager"
   />
   <h1>Bio</h1>
