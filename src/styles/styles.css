@@ -16,6 +16,12 @@
     --link-active: oklch(from var(--link-color) calc(l * 0.75) c h);
   }
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: contrast-color(contrast-color(var(--base-color)));
+  color: contrast-color(var(--base-color));
+}
 #container {
   container-type: inline-size;
   container-name: main-container;
@@ -51,6 +57,18 @@ p {
 ul {
   list-style: none;
   padding: 0;
+}
+a {
+  color: var(--link-color);
+  &:hover {
+    color: var(--link-hover);
+  }
+  &:active {
+    color: var(--link-active);
+  }
+  &:visited {
+    color: var(--link-visited);
+  }
 }
 
 @container main-container (width < 430px) {

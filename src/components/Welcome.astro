@@ -4,8 +4,6 @@ import { getCollection } from "astro:content";
 import Talk from "./talk.astro";
 import About from "./about.astro";
 
-import "../styles/styles.css";
-
 const talkList = await getCollection("talks");
 const sessionList = await getCollection("sessions");
 const talkListSorted = talkList.sort((a, b) => {
