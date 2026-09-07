@@ -11,7 +11,7 @@ const sessionList = await getCollection("sessions");
 <div id="container">
   <div class="content-wrapper">
     <main>
-      <h1>Lucien Immink is available for {sessionList.length + 1}+ sessions</h1>
+      <h1><span class="mono" title="Lucien Immink">&lt;li&gt;</span> is available for {sessionList.length + 1}+ sessions</h1>
       <p>Here are some of the current sessions I offer.</p>
       <ul>
         {
@@ -28,3 +28,9 @@ const sessionList = await getCollection("sessions");
     </aside>
   </div>
 </div>
+
+<style>
+  .mono {
+    font-family: monospace;
+  }
+</style>

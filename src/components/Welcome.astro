@@ -26,7 +26,7 @@ const enrichedTalkListSorted = talkListSorted.map((talk) => {
 <div id="container">
   <div class="content-wrapper">
     <main>
-      <h1>{talkList.length + 1}+ Talks given by Lucien Immink</h1>
+      <h1>{talkList.length + 1}+ Talks given by <span class="mono" title="Lucien Immink">&lt;li&gt;</span></h1>
       <p>Here are some of the talks I have given.</p>
       <ul>
         {
@@ -43,3 +43,9 @@ const enrichedTalkListSorted = talkListSorted.map((talk) => {
     </aside>
   </div>
 </div>
+
+<style>
+  .mono {
+    font-family: monospace;
+  }
+</style>
