@@ -269,6 +269,17 @@
             "type": "website"
         },
         "id": "28"
+    },
+    {
+        "venue": "Frontmania 2026",
+        "location": "Utrecht, the Netherlands",
+        "sessionID": 1,
+        "date": "2026-10-07",
+        "link": {
+            "url": "https://frontmania.com/",
+            "type": "website"
+        },
+        "id": "29"
     }
 
 ]
