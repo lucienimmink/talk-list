@@ -10,13 +10,13 @@
     "deploy": "pnpm run build && node ./scripts/deploy.js"
   },
   "dependencies": {
-    "astro": "^7.3.5",
+    "astro": "^7.4.4",
     "sharp": "^0.35.5"
   },
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "24.22.2",
+      "version": "26.13.0",
       "onFail": "download"
     }
   },
